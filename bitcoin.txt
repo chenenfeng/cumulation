@@ -1,0 +1,43 @@
+1. what kind of currency we will trust?
+important thing is safe, safe, safe!
+safe sense:
+  (1) no one can change the amount of my money such as in account
+  (2) only through my authorization can pay
+bank give us sense of safety, because it pour a lot to maintain the accuracy of ledger
+our money become a data in ledger, which are sustained by large manpower and resource
+
+Can we borrow the strengh and resource from whole Internet(soooo strong) instead of single institution?
+yes we can, we have bitcoin.
+
+2. store style
+all computers enter bitcoin website will have a ledger
+I transfer some money, I need to tell my neighbor computer to update ledger.
+also they will talk to their neighbor, one to two, two to four, until broadcast all computers has updated ledger
+That can guarantee safe sense(1), one computer changes the money amount, it doesn't work, all computers have another ledger
+
+3. how to make safe sense (2) come true？
+use private and public key, public key is known by everybody, and private key is only known by yourself
+Asymmetric encryption
+the rule is A use his public/private key to encrypt something, only his private/public key can decrypt this cipher code
+so A want to send B something only can be known by B, A just use B's public key to encrypt message, and B can use his private key
+process: 
+  private key: randomly generate a string.
+  public key: apply some rules(Elliptic curve algorithm) generate a string according to private key
+if you want to transfer money to B, use B's public key to 'lock' B, public key has strong relationship and similarity to account
+only if I use my private key to decipher the encrypt money then I can spend them,
+which makes 'only through my authorization can spend money'
+
+A->B   5 BTC
+input:
+txn#: where the money come from(it has A's public key info)
+script generated from private key(to decipher A's 5BTC to make sure A has right to spend these 5 btc)
+output:
+B script generated from B public key(to encrypt A's 5BTC)
+amount: 5 BTC
+
+4. how to make safe sense(1) come true? my money can't be modified 
+ledger in BTC website only has transaction record, doesn't contain account balance.
+account balance is calculated by trackiing transaction record, if someone wants to make fake account balance
+he must make fake transaction, but it is so difficult.
+
+
